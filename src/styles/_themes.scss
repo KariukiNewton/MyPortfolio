@@ -1,0 +1,29 @@
+$light-bg: #ffffff;
+$light-text: #222222;
+
+$dark-bg: #1c1c1c;
+$dark-text: #eeeeee;
+
+$skyblue-bg: #cbe9f7;
+$skyblue-text: #00334e;
+
+.app.light {
+    --background: #{$light-bg};
+    --text: #{$light-text};
+}
+
+.app.dark {
+    --background: #{$dark-bg};
+    --text: #{$dark-text};
+}
+
+.app.skyblue {
+    --background: #{$skyblue-bg};
+    --text: #{$skyblue-text};
+}
+
+.app {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: var(--background);
+    color: var(--text);
+}

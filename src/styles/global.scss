@@ -1,0 +1,27 @@
+@use './header';
+@use './contacts';
+@use './home';
+@use './projects';
+@use './services';
+@use './settingsOverlay';
+@use './themes';
+
+// Define default variables
+:root {
+    --background: #ffffff;
+    --text: #222222;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    width: 100%;
+    overflow-x: hidden;
+}
