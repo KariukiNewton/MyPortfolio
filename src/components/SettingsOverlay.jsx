@@ -1,52 +1,21 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FiSettings } from 'react-icons/fi';
+import { FiSun, FiMoon } from 'react-icons/fi';
+import '../styles/_settingsOverlay.scss'; // optional custom styling
 
 const SettingsOverlay = () => {
     const { theme, toggleTheme } = useContext(ThemeContext);
-    const [isOpen, setIsOpen] = useState(false);
 
-    const themes = ['light', 'dark', 'skyblue'];
+    const isDark = theme === 'dark';
 
     return (
-        <div className="settings-overlay">
-            {/* Toggle button */}
-            <button
-                className="settings-toggle"
-                onClick={() => setIsOpen(prev => !prev)}
-                aria-label="Toggle Settings"
-            >
-                <FiSettings />
-            </button>
-
-            {/* Animated Panel */}
-            <AnimatePresence>
-                {isOpen && (
-                    <motion.div
-                        className="theme-panel"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 20 }}
-                        transition={{ duration: 0.3 }}
-                    >
-                        <h4>Choose Theme</h4>
-                        <ul>
-                            {themes.map((t) => (
-                                <li key={t}>
-                                    <button
-                                        className={`theme-button ${theme === t ? 'active' : ''}`}
-                                        onClick={() => toggleTheme(t)}
-                                    >
-                                        {t.charAt(0).toUpperCase() + t.slice(1)}
-                                    </button>
-                                </li>
-                            ))}
-                        </ul>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-        </div>
+        <button
+            className="theme-toggle-btn"
+            onClick={() => toggleTheme(isDark ? 'light' : 'dark')}
+            aria-label="Toggle Theme"
+        >
+            {isDark ? <FiSun /> : <FiMoon />}
+        </button>
     );
 };
 

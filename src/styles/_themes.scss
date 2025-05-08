@@ -10,16 +10,19 @@ $skyblue-text: #00334e;
 .app.light {
     --background: #{$light-bg};
     --text: #{$light-text};
+    --card-bg: #f9f9f9;
 }
 
 .app.dark {
     --background: #{$dark-bg};
     --text: #{$dark-text};
+    --card-bg: #2a2a2a;
 }
 
 .app.skyblue {
     --background: #{$skyblue-bg};
     --text: #{$skyblue-text};
+    --card-bg: #e3f4fd;
 }
 
 .app {
