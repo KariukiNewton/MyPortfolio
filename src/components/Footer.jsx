@@ -1,43 +1,44 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import '../styles/global.scss';
+import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import '../styles/global.scss'; // Ensure styling goes in here or a dedicated _footer.scss partial
 
 const Footer = () => {
-    const currentDate = new Date().getFullYear();
-
     return (
         <footer className="footer">
-            {/* Main Footer Content */}
-            <div className="footer-top">
-                <motion.div
-                    className="footer-text"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.3, duration: 0.6 }}
-                >
-                    <p>© {currentDate} | All rights reserved</p>
-                    <p className="adjournment-text">Thank you for visiting!</p>
-                </motion.div>
+            <div className="footer__top">
+                <nav className="footer__nav">
+                    <a href="#home">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contacts">Contact Us</a>
+                </nav>
 
-                <motion.div
-                    className="footer-column"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.5, duration: 0.6 }}
-                >
-                    <p> Nairobi, Kenya</p>
-                </motion.div>
+                <div className="footer__socials">
+
+                    <h2 className="follow_me">Follow Me</h2>
+
+                    <div className="social-links">
+                        <a href="https://github.com/KariukiNewton" target="_blank" rel="noreferrer">
+                            <FaGithub />
+                        </a>
+                        <a href="https://www.instagram.com/kariukiii_/?__pwa=1" target="_blank" rel="noreferrer">
+                            <FaInstagram />
+                        </a>
+                        <a href="https://www.linkedin.com/in/newton-kariuki-504144274/" target="_blank" rel="noreferrer">
+                            <FaLinkedin />
+                        </a>
+                        <a href="https://x.com/k9ris_" target="_blank" rel="noreferrer">
+                            <FaTwitter />
+                        </a>
+                    </div>
+
+                </div>
             </div>
 
-            {/* Footer Bottom */}
-            <motion.div
-                className="footer-bottom"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.7, duration: 0.6 }}
-            >
-                <p>Made with ❤️ | Powered by React</p>
-            </motion.div>
+            <hr className="footer__divider" />
+
+            <div className="footer__bottom">
+                <p>© 2025 Newton Kariuki</p>
+            </div>
         </footer>
     );
 };

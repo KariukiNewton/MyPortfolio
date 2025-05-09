@@ -5,14 +5,14 @@
     text-align: center;
 
     .contacts-title {
-        font-size: 2.5rem;
+        font-size: var(--font-size-extra-large);
         margin-bottom: 2rem;
     }
 
     .social-icons {
         display: flex;
         justify-content: center;
-        gap: 1.5rem;
+        gap: 1.8rem;
         font-size: 2rem;
         margin-bottom: 2rem;
 
@@ -78,7 +78,7 @@
             right: 1rem;
             background: transparent;
             border: none;
-            font-size: 1.5rem;
+            font-size: var(--font-size-large);
             cursor: pointer;
             color: var(--text);
 
@@ -99,6 +99,9 @@
                 border: 1px solid #ccc;
                 background: var(--background);
                 color: var(--text);
+                font-size: var(--font-size-small);
+
+
             }
 
             button[type="submit"] {
@@ -108,6 +111,7 @@
                 padding: 0.75rem;
                 border-radius: 0.5rem;
                 cursor: pointer;
+                font-size: var(--font-size-small);
 
                 &:hover {
                     background-color: #0056b3;

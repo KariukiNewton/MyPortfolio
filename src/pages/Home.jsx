@@ -39,7 +39,16 @@ const Home = () => {
                 </motion.p>
 
                 <div className="home__buttons">
-                    <button className="btn btn--outline">Download CV</button>
+                    <button className="btn btn--outline">
+                        <a
+                            href="/myCV.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{ color: 'inherit', textDecoration: 'none' }}
+                        >
+                            View CV
+                        </a>
+                    </button>
                 </div>
             </div>
 

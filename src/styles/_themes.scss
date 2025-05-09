@@ -11,18 +11,27 @@ $skyblue-text: #00334e;
     --background: #{$light-bg};
     --text: #{$light-text};
     --card-bg: #f9f9f9;
+
+    --scroll-track: #f0f0f0;
+    --scroll-thumb: #c0c0c0;
 }
 
 .app.dark {
     --background: #{$dark-bg};
     --text: #{$dark-text};
     --card-bg: #2a2a2a;
+
+    --scroll-track: #1e1e1e;
+    --scroll-thumb: #444444;
 }
 
 .app.skyblue {
     --background: #{$skyblue-bg};
     --text: #{$skyblue-text};
     --card-bg: #e3f4fd;
+
+    --scroll-track: #e0f7ff;
+    --scroll-thumb: #3399cc;
 }
 
 .app {

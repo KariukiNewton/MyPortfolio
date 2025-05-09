@@ -5,7 +5,7 @@
 
     .projects-title {
         text-align: center;
-        font-size: 3rem;
+        font-size: var(--font-size-extra-large);
         margin-bottom: 3rem;
         font-weight: bold;
     }
@@ -22,7 +22,7 @@
             color: white;
             border: none;
             padding: 1rem;
-            font-size: 1.5rem;
+            font-size: var(--font-size-large);
             border-radius: 50%;
             cursor: pointer;
             z-index: 2;
@@ -50,7 +50,7 @@
         padding: 1rem 0 2rem;
 
         &::-webkit-scrollbar {
-            height: 10px;
+            height: 20px;
         }
 
         &::-webkit-scrollbar-thumb {
@@ -80,7 +80,7 @@
         }
 
         h3 {
-            font-size: 1.4rem;
+            font-size: var(--font-size-large);
             font-weight: 600;
             margin: 1.5rem 1.5rem 0.5rem;
         }
@@ -98,7 +98,7 @@
             transition: background-color 0.3s;
 
             &:hover {
-                background-color: #0056b3;
+                background-color: #144375;
             }
         }
     }

@@ -13,9 +13,10 @@
     --text: #222222;
 
     // ✅ Add font size variables
-    --font-size-small: 14px;
-    --font-size-base: 16px;
-    --font-size-large: 18px;
+    --font-size-small: 1rem;
+    --font-size-base: 1.2rem;
+    --font-size-large: 1.5rem;
+    --font-size-extra-large: 2.5rem;
 
 
     // ✅ Add font family variables
@@ -37,17 +38,23 @@ body {
     color: var(--text);
     width: 100%;
     overflow-x: hidden;
-}
 
-// Optional utility classes for overrides (if needed)
-.font-small {
-    font-size: var(--font-size-small);
-}
+    overflow-y: scroll; // Ensure vertical scrollbar always visible
 
-.font-base {
-    font-size: var(--font-size-base);
-}
+    scrollbar-width: thin; // Firefox
+    scrollbar-color: var(--scroll-thumb) var(--scroll-track); // Firefox
 
-.font-large {
-    font-size: var(--font-size-large);
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--scroll-track);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--scroll-thumb);
+        border-radius: 10px;
+        border: 2px solid var(--scroll-track);
+    }
 }
