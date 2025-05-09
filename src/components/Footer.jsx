@@ -17,16 +17,16 @@ const Footer = () => {
                     <h2 className="follow_me">Follow Me</h2>
 
                     <div className="social-links">
-                        <a href="https://github.com/KariukiNewton" target="_blank" rel="noreferrer">
+                        <a href="https://github.com/KariukiNewton" target="_blank" rel="noreferrer" title="Visit my GitHub profile">
                             <FaGithub />
                         </a>
-                        <a href="https://www.instagram.com/kariukiii_/?__pwa=1" target="_blank" rel="noreferrer">
+                        <a href="https://www.instagram.com/kariukiii_/?__pwa=1" target="_blank" rel="noreferrer" title="Visit my Instagram profile">
                             <FaInstagram />
                         </a>
-                        <a href="https://www.linkedin.com/in/newton-kariuki-504144274/" target="_blank" rel="noreferrer">
+                        <a href="https://www.linkedin.com/in/newton-kariuki-504144274/" target="_blank" rel="noreferrer" title="Visit my Linkedin profile">
                             <FaLinkedin />
                         </a>
-                        <a href="https://x.com/k9ris_" target="_blank" rel="noreferrer">
+                        <a href="https://x.com/k9ris_" target="_blank" rel="noreferrer" title="Visit my Twitter profile">
                             <FaTwitter />
                         </a>
                     </div>
